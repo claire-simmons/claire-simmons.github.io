@@ -1,0 +1,104 @@
+
+* { box-sizing: border-box; }
+body {
+  margin: 0;
+  font-family: "Lora", system-ui, -apple-system, Segoe UI, Roboto, Arial, sans-serif;
+  color: #404176;
+  background: #d0e3fc;
+}
+
+.page {
+  display: grid;
+  grid-template-rows: auto 1fr;
+  min-height: 100svh;
+}
+
+.site-header {
+  display: grid;
+  grid-template-columns: auto 1fr auto;
+  align-items: center;
+  gap: 1rem;
+  padding: 1.25rem clamp(1rem, 4vw, 3rem);
+  background: #fff;
+  border-bottom: 4px solid #404176;
+}
+.logo img {
+  width: 150px; height: 100px; display: block;
+}
+
+.main-nav {
+  display: grid;           
+  justify-content: start;
+  gap: clamp(.75rem, 3vw, 2rem);
+}
+.main-nav a { text-decoration: none; color: #404176; font-weight: 700; letter-spacing: .02em; }
+
+.login {
+  justify-self: end;
+  text-decoration: none;
+  padding: .4rem .9rem;
+  border-radius: .5rem;
+  background: #d0e3fc;
+  color: #404176;
+  font-weight: 700;
+}
+.site-main {
+  display: grid;
+  grid-template-areas:
+    "content"
+    "news"; 
+  gap: 2rem;
+  padding: 1.5rem clamp(1rem, 4vw, 3rem) 3rem;
+}
+
+.news { grid-area: news; }
+.content { grid-area: content; }
+
+
+.news h2 {
+  margin: 0 0 .75rem 0;
+  text-transform: lowercase;
+  font-size: 1.25rem;
+  color: #404176;
+  border-top: 3px solid #404176;
+  padding-top: .75rem;
+}
+.news-item { border-bottom: 2px solid #ded4e4; padding: 1rem 0; }
+.news-item h3 { margin: 0 0 .35rem 0; font-size: 1rem; text-transform: lowercase; }
+
+.headline {
+  margin: 1rem 0 .5rem 0;
+  font-weight: 800;
+  font-size: clamp(1.8rem, 3.6vw, 2.6rem);
+  color: #404176; 
+}
+.copy { line-height: 1.6; }
+
+.media-grid {
+  display: grid; 
+  grid-template-columns: 1fr;
+  gap: 1rem;
+}
+
+.media { position: relative; aspect-ratio: 16/9; background: #eee; overflow: hidden; }
+.media img, .media video, .media iframe {
+  position: absolute; inset: 0; width: 100%; height: 100%;
+}
+.media img, .media video { object-fit: cover; }
+
+
+@media (min-width: 900px) {
+
+  .site-main {
+    grid-template-columns: 300px 1fr;
+    grid-template-areas:
+      "news content";
+    align-items: start;
+    gap: clamp(1.5rem, 3vw, 3rem);
+  }
+
+.media-grid {
+    grid-template-columns: repeat(3, 1fr);
+    gap: clamp(.75rem, 2vw, 1.25rem);
+  }
+}

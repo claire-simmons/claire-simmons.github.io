@@ -1,0 +1,75 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <title>Layout with CSS Grid</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+
+  <link href="https://fonts.googleapis.com/css2?family=Nunito:wght@400;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+ <div class="page">
+
+    <header class="site-header">
+      <a class="logo" href="#">
+        <img src="images/cow.img.png" alt="site logo">
+      </a>
+
+      <nav class="main-nav" aria-label="Primary">
+        <a href="#">ABOUT</a>
+        <a href="#">CONTACT</a>
+      </nav>
+
+      <a class="login" href="#">log in</a>
+    </header>
+
+    <main class="site-main">
+      <aside class="news" aria-label="News">
+        <h2>news</h2>
+
+        <article class="news-item">
+          <h3>interestings things</h3>
+          <p>many things many things many things many things many things many things many things</p>
+        </article>
+
+        <article class="news-item">
+          <h3>interesting things</h3>
+          <p>many things many things many things many things many things many things many things</p>
+        </article>
+
+        <article class="news-item">
+          <h3>interesting things</h3>
+          <p>many things many things many things many things many things many things many things</p>
+        </article>
+      </aside>
+
+      <section class="content">
+        <div class="media-grid">
+          <div class="media img-div">
+            <img src="images/lamb.img.png" alt="lamb jumping in the air">
+          </div>
+<div class="media yt-div">
+  <iframe
+    src="https://www.youtube.com/embed/2SNSpXBGPqk"
+    title="3 Minutes Of The Cutest Animals"
+    frameborder="0"
+    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+    allowfullscreen>
+  </iframe>
+</div>
+<div class="media yt-div">
+  <iframe src="https://www.youtube.com/embed/YsM1QwjpUpc" title="Cows Go Moo (Baby Edition)" allowfullscreen></iframe>
+</div>
+
+        <h1 class="headline">Very Important</h1>
+        <p class="copy">
+          many things many things many many many things many things many many many things many things many many many
+          things many many things many things many many things many things many many many things…
+        </p>
+      </section>
+    </main>
+
+  </div>
+</body>
+</html>
